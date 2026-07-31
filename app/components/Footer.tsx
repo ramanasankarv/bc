@@ -10,7 +10,9 @@ export default function Footer() {
         <div className="foot-grid">
           <div>
             <div className="foot-logo">
-              <Image src="/logo.png" alt={company.name} width={219} height={120} />
+              <span className="foot-logo-badge">
+                <Image src="/logo.png" alt={company.name} width={219} height={120} />
+              </span>
             </div>
             <p style={{ marginTop: 16, maxWidth: "26em", fontSize: "0.92rem" }}>
               {company.tagline} Modernizing legacy data platforms and operationalizing AI at
