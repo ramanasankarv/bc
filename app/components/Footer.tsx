@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { company } from "@/app/lib/content";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div>
             <div className="foot-logo">
-              <span className="mono">BC</span> {company.name}
+              <Image src="/logo.png" alt={company.name} width={219} height={120} />
             </div>
             <p style={{ marginTop: 16, maxWidth: "26em", fontSize: "0.92rem" }}>
               {company.tagline} Modernizing legacy data platforms and operationalizing AI at
