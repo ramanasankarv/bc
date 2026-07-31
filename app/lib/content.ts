@@ -149,6 +149,20 @@ export const services: Service[] = [
       "agent orchestration",
     ],
   },
+  {
+    num: "07",
+    title: "Data and AI Governance",
+    summary:
+      "Governance frameworks that keep data trustworthy and AI accountable — from access controls and data quality to responsible-AI oversight.",
+    capabilities: [
+      "data quality & stewardship",
+      "access & policy controls",
+      "regulatory compliance",
+      "model risk & responsible AI",
+      "audit & lineage tracking",
+      "governance operating models",
+    ],
+  },
 ];
 
 export const framework = {
