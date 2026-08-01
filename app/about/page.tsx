@@ -4,7 +4,7 @@ import Reveal from "../components/Reveal";
 import SectionHead from "../components/SectionHead";
 import CTABand from "../components/CTABand";
 import { whoWeAre, company, differentiators } from "../lib/content";
-import { whoWeAreIcons, differentiatorIcons } from "../lib/sectionIcons";
+import { whoWeAreIcons, differentiatorImages } from "../lib/sectionIcons";
 
 export const metadata: Metadata = {
   title: "About",
@@ -90,25 +90,24 @@ export default function AboutPage() {
             title="What makes our modernization approach different."
           />
           <div className="diff-grid">
-            {differentiators.map((d, i) => {
-              const Icon = differentiatorIcons[i];
-              return (
+            {differentiators.map((d, i) => (
               <Reveal key={d.title}>
-                <div className="diff">
-                  <div className="icon-badge">
-                    <Icon size={22} strokeWidth={1.75} />
+                <div className="diff has-img">
+                  <div className="card-img">
+                    <Image src={differentiatorImages[i]} alt="" width={800} height={450} />
                   </div>
-                  <h3>{d.title}</h3>
-                  <p>{d.body}</p>
-                  <ul>
-                    {d.points.map((p) => (
-                      <li key={p}>{p}</li>
-                    ))}
-                  </ul>
+                  <div className="card-body">
+                    <h3>{d.title}</h3>
+                    <p>{d.body}</p>
+                    <ul>
+                      {d.points.map((p) => (
+                        <li key={p}>{p}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </Reveal>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>
