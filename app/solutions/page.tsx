@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "../components/Reveal";
 import SectionHead from "../components/SectionHead";
 import CTABand from "../components/CTABand";
 import { framework, differentiators, services } from "../lib/content";
+import { serviceImages, differentiatorImages } from "../lib/sectionIcons";
 
 export const metadata: Metadata = {
   title: "Solutions",
@@ -17,6 +19,9 @@ export default function SolutionsPage() {
   return (
     <>
       <section className="page-hero">
+        <div className="page-hero-bg">
+          <Image src="/heroes/solutions-hero.jpg" alt="" fill priority />
+        </div>
         <div className="wrap">
           <div className="eyebrow on-dark">Solutions</div>
           <h1>AI-powered frameworks that turn legacy systems into intelligent cloud platforms.</h1>
@@ -56,49 +61,59 @@ export default function SolutionsPage() {
           <div className="two-col">
             {metadata && (
               <Reveal>
-                <div className="card" style={{ padding: 34 }}>
-                  <h3 style={{ fontSize: "1.35rem" }}>{metadata.title}</h3>
-                  <p>{metadata.summary}</p>
-                  <ul className="taglist" style={{ marginTop: 18 }}>
-                    {metadata.capabilities.map((c) => (
-                      <li key={c}>{c}</li>
-                    ))}
-                  </ul>
-                  {metadata.to && (
-                    <>
-                      <h4
-                        style={{
-                          fontFamily: "var(--font-mono)",
-                          fontSize: "0.72rem",
-                          letterSpacing: "0.14em",
-                          textTransform: "uppercase",
-                          color: "var(--muted)",
-                          margin: "22px 0 12px",
-                        }}
-                      >
-                        Especially powerful across
-                      </h4>
-                      <ul className="taglist">
-                        {metadata.to.map((t) => (
-                          <li key={t}>{t}</li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
+                <div className="card has-img">
+                  <div className="card-img">
+                    <Image src={serviceImages[metadata.num]} alt="" width={800} height={450} />
+                  </div>
+                  <div className="card-body" style={{ padding: 34 }}>
+                    <h3 style={{ fontSize: "1.35rem" }}>{metadata.title}</h3>
+                    <p>{metadata.summary}</p>
+                    <ul className="taglist" style={{ marginTop: 18 }}>
+                      {metadata.capabilities.map((c) => (
+                        <li key={c}>{c}</li>
+                      ))}
+                    </ul>
+                    {metadata.to && (
+                      <>
+                        <h4
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "0.72rem",
+                            letterSpacing: "0.14em",
+                            textTransform: "uppercase",
+                            color: "var(--muted)",
+                            margin: "22px 0 12px",
+                          }}
+                        >
+                          Especially powerful across
+                        </h4>
+                        <ul className="taglist">
+                          {metadata.to.map((t) => (
+                            <li key={t}>{t}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </div>
                 </div>
               </Reveal>
             )}
             {aiSolutions && (
               <Reveal delay={80}>
-                <div className="card" style={{ padding: 34 }}>
-                  <h3 style={{ fontSize: "1.35rem" }}>{aiSolutions.title}</h3>
-                  <p>{aiSolutions.summary}</p>
-                  <ul className="taglist" style={{ marginTop: 18 }}>
-                    {aiSolutions.capabilities.map((c) => (
-                      <li key={c}>{c}</li>
-                    ))}
-                    <li>data intelligence platforms</li>
-                  </ul>
+                <div className="card has-img">
+                  <div className="card-img">
+                    <Image src={serviceImages[aiSolutions.num]} alt="" width={800} height={450} />
+                  </div>
+                  <div className="card-body" style={{ padding: 34 }}>
+                    <h3 style={{ fontSize: "1.35rem" }}>{aiSolutions.title}</h3>
+                    <p>{aiSolutions.summary}</p>
+                    <ul className="taglist" style={{ marginTop: 18 }}>
+                      {aiSolutions.capabilities.map((c) => (
+                        <li key={c}>{c}</li>
+                      ))}
+                      <li>data intelligence platforms</li>
+                    </ul>
+                  </div>
                 </div>
               </Reveal>
             )}
@@ -114,16 +129,21 @@ export default function SolutionsPage() {
             title="Built AI-first, delivered automation-first, tuned for AI performance."
           />
           <div className="diff-grid">
-            {differentiators.map((d) => (
+            {differentiators.map((d, i) => (
               <Reveal key={d.title}>
-                <div className="diff" style={{ background: "#fff" }}>
-                  <h3>{d.title}</h3>
-                  <p>{d.body}</p>
-                  <ul>
-                    {d.points.map((p) => (
-                      <li key={p}>{p}</li>
-                    ))}
-                  </ul>
+                <div className="diff has-img" style={{ background: "#fff" }}>
+                  <div className="card-img">
+                    <Image src={differentiatorImages[i]} alt="" width={800} height={450} />
+                  </div>
+                  <div className="card-body">
+                    <h3>{d.title}</h3>
+                    <p>{d.body}</p>
+                    <ul>
+                      {d.points.map((p) => (
+                        <li key={p}>{p}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </Reveal>
             ))}

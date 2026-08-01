@@ -10,7 +10,7 @@ const interests = [
   "AI Solutions & Agents",
   "Metadata Platforms",
   "Performance for AI",
-  "Not sure yet",
+  "Others",
 ];
 
 export default function ContactForm() {

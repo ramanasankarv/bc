@@ -5,6 +5,7 @@ import SectionHead from "./components/SectionHead";
 import ServiceCard from "./components/ServiceCard";
 import CTABand from "./components/CTABand";
 import { hero, metrics, whoWeAre, services, framework } from "./lib/content";
+import { whoWeAreIcons, frameworkIcons } from "./lib/sectionIcons";
 
 export default function HomePage() {
   return (
@@ -73,11 +74,14 @@ export default function HomePage() {
               We combine deep technical capability across:
             </p>
             <div className="chips">
-              {whoWeAre.capabilities.map((c) => (
-                <span className="chip" key={c}>
-                  <b>›</b> {c}
-                </span>
-              ))}
+              {whoWeAre.capabilities.map((c, i) => {
+                const Icon = whoWeAreIcons[i];
+                return (
+                  <span className="chip" key={c}>
+                    <Icon size={15} strokeWidth={2} /> {c}
+                  </span>
+                );
+              })}
             </div>
             <Link className="btn ghost" href="/about" style={{ marginTop: 26 }}>
               More about us
@@ -114,14 +118,22 @@ export default function HomePage() {
         <div className="wrap">
           <SectionHead eyebrow={framework.eyebrow} title={framework.title} onDark />
           <div className="steps">
-            {framework.steps.map((s) => (
-              <div className="step" key={s.n}>
-                <div className="n">{s.n}</div>
-                <div className="bar" />
-                <h3>{s.title}</h3>
-                <p>{s.body}</p>
-              </div>
-            ))}
+            {framework.steps.map((s, i) => {
+              const Icon = frameworkIcons[i];
+              return (
+                <div className="step" key={s.n}>
+                  <div className="step-top">
+                    <div className="icon-badge sm">
+                      <Icon size={18} strokeWidth={1.75} />
+                    </div>
+                    <div className="n">{s.n}</div>
+                  </div>
+                  <div className="bar" />
+                  <h3>{s.title}</h3>
+                  <p>{s.body}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

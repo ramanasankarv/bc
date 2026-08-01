@@ -9,7 +9,7 @@ export const company = {
   short: "Blue Cloud AI",
   tagline: "Cloud. Data. AI. Transformation.",
   email: "hello@bluecloudai.tech",
-  location: "Bengaluru, India",
+  location: "177 SW Range Ave, Unit #5705 Madison, FL 32340",
   mission:
     "Blue Cloud AI Technologies empowers organizations to modernize legacy data platforms and operationalize artificial intelligence through cloud-native architectures, intelligent automation, and enterprise-scale systems integration.",
 };

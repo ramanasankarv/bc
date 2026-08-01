@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "../components/Reveal";
 import SectionHead from "../components/SectionHead";
 import CTABand from "../components/CTABand";
 import { whoWeAre, company, differentiators } from "../lib/content";
+import { whoWeAreIcons, differentiatorIcons } from "../lib/sectionIcons";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,6 +16,9 @@ export default function AboutPage() {
   return (
     <>
       <section className="page-hero">
+        <div className="page-hero-bg">
+          <Image src="/heroes/about-hero.jpg" alt="" fill priority />
+        </div>
         <div className="wrap">
           <div className="eyebrow on-dark">About us</div>
           <h1>Turning legacy complexity into intelligent, high-performing data platforms.</h1>
@@ -42,9 +47,14 @@ export default function AboutPage() {
           <Reveal delay={80}>
             <p style={{ color: "var(--muted)", marginBottom: 18 }}>Our expertise spans:</p>
             <div className="chips">
-              {whoWeAre.capabilities.map((c) => (
-                <span className="chip" key={c}><b>›</b> {c}</span>
-              ))}
+              {whoWeAre.capabilities.map((c, i) => {
+                const Icon = whoWeAreIcons[i];
+                return (
+                  <span className="chip" key={c}>
+                    <Icon size={15} strokeWidth={2} /> {c}
+                  </span>
+                );
+              })}
             </div>
           </Reveal>
         </div>
@@ -80,9 +90,14 @@ export default function AboutPage() {
             title="What makes our modernization approach different."
           />
           <div className="diff-grid">
-            {differentiators.map((d) => (
+            {differentiators.map((d, i) => {
+              const Icon = differentiatorIcons[i];
+              return (
               <Reveal key={d.title}>
                 <div className="diff">
+                  <div className="icon-badge">
+                    <Icon size={22} strokeWidth={1.75} />
+                  </div>
                   <h3>{d.title}</h3>
                   <p>{d.body}</p>
                   <ul>
@@ -92,7 +107,8 @@ export default function AboutPage() {
                   </ul>
                 </div>
               </Reveal>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
