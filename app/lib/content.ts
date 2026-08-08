@@ -82,6 +82,20 @@ export const services: Service[] = [
   },
   {
     num: "02",
+    title: "Data and AI Governance",
+    summary:
+      "Governance frameworks that keep data trustworthy and AI accountable — from access controls and data quality to responsible-AI oversight.",
+    capabilities: [
+      "data quality & stewardship",
+      "access & policy controls",
+      "regulatory compliance",
+      "model risk & responsible AI",
+      "audit & lineage tracking",
+      "governance operating models",
+    ],
+  },
+  {
+    num: "03",
     title: "AI-Powered Modernization Frameworks",
     summary:
       "GenAI agents and intelligent automation frameworks that accelerate modernization programs and cut technical debt.",
@@ -92,19 +106,6 @@ export const services: Service[] = [
       "tech-debt inventory",
       "AI-assisted testing",
       "NLP-powered data discovery",
-    ],
-  },
-  {
-    num: "03",
-    title: "Mainframe to Cloud Transformation",
-    summary:
-      "Mainframe decomposition and modernization into cloud-native, API-driven microservices architectures.",
-    capabilities: [
-      "COBOL modernization",
-      "DB2 migration",
-      "ingestion to Azure / AWS / GCP",
-      "microservices decomposition",
-      "API enablement",
     ],
   },
   {
@@ -123,6 +124,19 @@ export const services: Service[] = [
   },
   {
     num: "05",
+    title: "Mainframe to Cloud Transformation",
+    summary:
+      "Mainframe decomposition and modernization into cloud-native, API-driven microservices architectures.",
+    capabilities: [
+      "COBOL modernization",
+      "DB2 migration",
+      "ingestion to Azure / AWS / GCP",
+      "microservices decomposition",
+      "API enablement",
+    ],
+  },
+  {
+    num: "06",
     title: "Metadata-Driven Data Platforms",
     summary:
       "Intelligent metadata frameworks enabling governed, AI-ready analytics across modern lakehouse ecosystems.",
@@ -137,32 +151,19 @@ export const services: Service[] = [
     to: ["Microsoft Purview", "Unity Catalog", "Semantic layers", "Lakehouse metadata"],
   },
   {
-    num: "06",
-    title: "Performance Optimization for AI",
-    summary:
-      "Data estates tuned specifically for AI workloads — a differentiator few modernization partners engineer for.",
-    capabilities: [
-      "AI-assistant performance",
-      "vector search",
-      "NLP frameworks",
-      "semantic retrieval",
-      "agent orchestration",
-    ],
-  },
-  {
     num: "07",
-    title: "Data and AI Governance",
+    title: "Staff Augmentation",
     summary:
-      "Governance frameworks that keep data trustworthy and AI accountable — from access controls and data quality to responsible-AI oversight.",
+      "Flexible, on-demand talent extension that integrates seamlessly with your teams to accelerate delivery without long-term overhead.",
     capabilities: [
-      "data quality & stewardship",
-      "access & policy controls",
-      "regulatory compliance",
-      "model risk & responsible AI",
-      "audit & lineage tracking",
-      "governance operating models",
+      "dedicated developers",
+      "DevOps engineers",
+      "QA & testing specialists",
+      "UI/UX designers",
+      "project-based scaling",
+      "rapid team onboarding",
     ],
-  },
+  }
 ];
 
 export const framework = {
