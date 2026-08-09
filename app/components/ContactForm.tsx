@@ -6,10 +6,12 @@ type Status = "idle" | "sending" | "ok" | "err";
 
 const interests = [
   "Database Modernization",
-  "Mainframe to Cloud",
-  "AI Solutions & Agents",
-  "Metadata Platforms",
-  "Performance for AI",
+  "Data and AI Governance",
+  "AI-Powered Modernization Frameworks",
+  "AI Solutions & Intelligent Agents",
+  "Mainframe to Cloud Transformation",
+  "Metadata-Driven Data Platforms",
+  "Staff Augmentation",
   "Others",
 ];
 

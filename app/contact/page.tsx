@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import ContactForm from "../components/ContactForm";
 import Reveal from "../components/Reveal";
-import { company, contact } from "../lib/content";
+import SectionHead from "../components/SectionHead";
+import { company, contact, legal } from "../lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -58,6 +59,25 @@ export default function ContactPage() {
           <Reveal delay={80}>
             <ContactForm />
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section legal">
+        <div className="wrap">
+          <SectionHead
+            eyebrow="Legal"
+            title="Disclaimer, privacy notice & terms of use."
+          />
+          <div className="legal-grid">
+            {legal.map((l) => (
+              <Reveal key={l.title}>
+                <div className="legal-block">
+                  <h3>{l.title}</h3>
+                  <p>{l.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </>

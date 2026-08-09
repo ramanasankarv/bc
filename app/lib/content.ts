@@ -201,3 +201,18 @@ export const contact = {
   title: "Turn your data into a strategic asset.",
   body: "Whether you're planning a migration, optimizing performance, or implementing AI — we'll tailor a strategy to your business goals and technical landscape.",
 };
+
+export const legal = [
+  {
+    title: "Disclaimer",
+    body: "The information provided on this website is for general informational purposes only and does not constitute professional, legal, or financial advice. Blue Cloud AI Technologies makes no warranties, express or implied, about the completeness, accuracy, or reliability of the content, services, or outcomes described. Engagement results vary depending on each client's systems, data, and business context, and nothing on this site should be relied upon as a guarantee of specific results.",
+  },
+  {
+    title: "Privacy Notice",
+    body: "We collect only the information you voluntarily provide through our contact form or email — such as your name, company, email address, and message — to respond to your inquiry and evaluate potential engagements. We do not sell or rent your personal information to third parties. Data may be shared with trusted service providers strictly to operate this website and deliver our services, and is retained only as long as necessary for those purposes. You may request access to, correction of, or deletion of your information at any time by contacting hello@bluecloudai.tech.",
+  },
+  {
+    title: "Terms of Use",
+    body: "By accessing this website, you agree to use it lawfully and solely to evaluate Blue Cloud AI Technologies' services. All content, branding, and materials on this site are the property of Blue Cloud AI Technologies unless otherwise noted and may not be reproduced without permission. Any engagement for services is governed by a separate signed agreement between Blue Cloud AI Technologies and the client, which takes precedence over the general terms described here. We reserve the right to update this website and these terms at any time without prior notice.",
+  },
+];
