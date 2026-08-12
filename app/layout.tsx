@@ -34,8 +34,10 @@ const mono = localFont({
   ],
 });
 
+const siteUrl = "https://bluecloudai.us";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bluecloudai.tech"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${company.name} — Database Modernization & AI Transformation`,
     template: `%s · ${company.short}`,
@@ -50,12 +52,52 @@ export const metadata: Metadata = {
     "metadata-driven data platforms",
     "GenAI agents",
     "systems integration",
+    "data and AI governance",
+    "staff augmentation",
   ],
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
   openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: company.name,
+    locale: "en_US",
     title: `${company.name} — Modernize Legacy Data. Accelerate AI.`,
     description:
       "Move from legacy databases, mainframes, and monoliths into secure cloud environments engineered for AI.",
-    type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: company.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${company.name} — Modernize Legacy Data. Accelerate AI.`,
+    description:
+      "Move from legacy databases, mainframes, and monoliths into secure cloud environments engineered for AI.",
+    images: ["/og-image.jpg"],
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: company.name,
+  alternateName: company.short,
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  description:
+    "IT consulting and systems-integration firm specializing in database modernization, cloud transformation, and AI-powered enterprise solutions.",
+  email: company.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: company.location,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: company.email,
+    contactType: "sales",
   },
 };
 
@@ -63,6 +105,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

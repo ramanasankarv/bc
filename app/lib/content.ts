@@ -8,7 +8,7 @@ export const company = {
   name: "Blue Cloud AI Technologies",
   short: "Blue Cloud AI",
   tagline: "Cloud. Data. AI. Transformation.",
-  email: "hello@bluecloudai.tech",
+  email: "hello@bluecloudai.us",
   location: "177 SW Range Ave, Unit #5705 Madison, FL 32340",
   mission:
     "Blue Cloud AI Technologies empowers organizations to modernize legacy data platforms and operationalize artificial intelligence through cloud-native architectures, intelligent automation, and enterprise-scale systems integration.",
@@ -209,7 +209,7 @@ export const legal = [
   },
   {
     title: "Privacy Notice",
-    body: "We collect only the information you voluntarily provide through our contact form or email — such as your name, company, email address, and message — to respond to your inquiry and evaluate potential engagements. We do not sell or rent your personal information to third parties. Data may be shared with trusted service providers strictly to operate this website and deliver our services, and is retained only as long as necessary for those purposes. You may request access to, correction of, or deletion of your information at any time by contacting hello@bluecloudai.tech.",
+    body: "We collect only the information you voluntarily provide through our contact form or email — such as your name, company, email address, and message — to respond to your inquiry and evaluate potential engagements. We do not sell or rent your personal information to third parties. Data may be shared with trusted service providers strictly to operate this website and deliver our services, and is retained only as long as necessary for those purposes. You may request access to, correction of, or deletion of your information at any time by contacting hello@bluecloudai.us.",
   },
   {
     title: "Terms of Use",

@@ -2,13 +2,20 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Reveal from "../components/Reveal";
 import CTABand from "../components/CTABand";
-import { services } from "../lib/content";
+import { services, company } from "../lib/content";
 import { serviceImages } from "../lib/sectionIcons";
 
+const title = "Services";
+const description =
+  "Database modernization, AI-powered frameworks, mainframe-to-cloud transformation, AI solutions, metadata-driven data platforms, and staff augmentation.";
+const images = [{ url: "/og-image.jpg", width: 1200, height: 630, alt: company.name }];
+
 export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Database modernization, AI-powered frameworks, mainframe-to-cloud transformation, AI solutions, and metadata-driven data platforms.",
+  title,
+  description,
+  alternates: { canonical: "/services" },
+  openGraph: { title, description, url: "/services", images },
+  twitter: { title, description, images: ["/og-image.jpg"] },
 };
 
 export default function ServicesPage() {

@@ -3,13 +3,20 @@ import Image from "next/image";
 import Reveal from "../components/Reveal";
 import SectionHead from "../components/SectionHead";
 import CTABand from "../components/CTABand";
-import { framework, differentiators, services } from "../lib/content";
+import { framework, differentiators, services, company } from "../lib/content";
 import { serviceImages, differentiatorImages } from "../lib/sectionIcons";
 
+const title = "Solutions";
+const description =
+  "AI-powered modernization frameworks that transform legacy systems into intelligent cloud platforms with metadata-driven architectures.";
+const images = [{ url: "/og-image.jpg", width: 1200, height: 630, alt: company.name }];
+
 export const metadata: Metadata = {
-  title: "Solutions",
-  description:
-    "AI-powered modernization frameworks that transform legacy systems into intelligent cloud platforms with metadata-driven architectures.",
+  title,
+  description,
+  alternates: { canonical: "/solutions" },
+  openGraph: { title, description, url: "/solutions", images },
+  twitter: { title, description, images: ["/og-image.jpg"] },
 };
 
 export default function SolutionsPage() {

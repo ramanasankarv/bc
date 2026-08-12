@@ -6,10 +6,17 @@ import CTABand from "../components/CTABand";
 import { whoWeAre, company, differentiators } from "../lib/content";
 import { whoWeAreIcons, differentiatorImages } from "../lib/sectionIcons";
 
+const title = "About";
+const description =
+  "A team of AI specialists, data architects, and engineers modernizing enterprise data estates at scale.";
+const images = [{ url: "/og-image.jpg", width: 1200, height: 630, alt: company.name }];
+
 export const metadata: Metadata = {
-  title: "About",
-  description:
-    "A team of AI specialists, data architects, and engineers modernizing enterprise data estates at scale.",
+  title,
+  description,
+  alternates: { canonical: "/about" },
+  openGraph: { title, description, url: "/about", images },
+  twitter: { title, description, images: ["/og-image.jpg"] },
 };
 
 export default function AboutPage() {

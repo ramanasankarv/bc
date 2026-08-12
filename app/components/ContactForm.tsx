@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { company } from "../lib/content";
 
 type Status = "idle" | "sending" | "ok" | "err";
 
@@ -98,7 +99,7 @@ export default function ContactForm() {
       )}
       <p className="form-note">
         Prefer email? Reach us directly at{" "}
-        <a href="mailto:hello@bluecloudai.tech" style={{ color: "var(--azure)" }}>hello@bluecloudai.tech</a>.
+        <a href={`mailto:${company.email}`} style={{ color: "var(--azure)" }}>{company.email}</a>.
       </p>
     </form>
   );

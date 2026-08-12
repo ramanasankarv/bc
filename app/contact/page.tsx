@@ -4,10 +4,17 @@ import Reveal from "../components/Reveal";
 import SectionHead from "../components/SectionHead";
 import { company, contact, legal } from "../lib/content";
 
+const title = "Contact";
+const description =
+  "Partner with Blue Cloud AI Technologies to accelerate your journey to modern data and AI platforms.";
+const images = [{ url: "/og-image.jpg", width: 1200, height: 630, alt: company.name }];
+
 export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Partner with Blue Cloud AI Technologies to accelerate your journey to modern data and AI platforms.",
+  title,
+  description,
+  alternates: { canonical: "/contact" },
+  openGraph: { title, description, url: "/contact", images },
+  twitter: { title, description, images: ["/og-image.jpg"] },
 };
 
 export default function ContactPage() {
