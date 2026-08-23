@@ -50,6 +50,14 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="item">
+              <div className="lab">Phone</div>
+              <div className="val">
+                <a href={`tel:${company.phone.replace(/[^+\d]/g, "")}`} style={{ color: "var(--azure)" }}>
+                  {company.phone}
+                </a>
+              </div>
+            </div>
+            <div className="item">
               <div className="lab">Based in</div>
               <div className="val">{company.location}</div>
             </div>

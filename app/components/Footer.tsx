@@ -39,6 +39,7 @@ export default function Footer() {
           <div>
             <h4>Connect</h4>
             <a href={`mailto:${company.email}`}>{company.email}</a>
+            <a href={`tel:${company.phone.replace(/[^+\d]/g, "")}`}>{company.phone}</a>
             <Link href="/contact">Request a consultation</Link>
             <span style={{ display: "block", padding: "6px 0", fontSize: "0.93rem" }}>
               {company.location}

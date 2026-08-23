@@ -90,6 +90,7 @@ const organizationJsonLd = {
   description:
     "IT consulting and systems-integration firm specializing in database modernization, cloud transformation, and AI-powered enterprise solutions.",
   email: company.email,
+  telephone: company.phone,
   address: {
     "@type": "PostalAddress",
     streetAddress: company.location,
@@ -97,6 +98,7 @@ const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     email: company.email,
+    telephone: company.phone,
     contactType: "sales",
   },
 };
