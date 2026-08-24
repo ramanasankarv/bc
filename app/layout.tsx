@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { company } from "./lib/content";
+
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
 // Self-hosted fonts — no external Google Fonts request at build or runtime.
 const display = localFont({
@@ -107,6 +110,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>
+        {gtmId && <GoogleTagManager gtmId={gtmId} />}
+        {gtmId && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
