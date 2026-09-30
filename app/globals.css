@@ -133,6 +133,15 @@ img { max-width: 100%; }
 .hero-visual { position: relative; height: 440px; }
 .hero-visual svg { width: 100%; height: 100%; display: block; }
 
+/* ---------- privacy policy ---------- */
+.privacy-content { max-width: 850px; }
+.privacy-content > p { color: var(--muted); font-size: 1.02rem; margin-bottom: 20px; }
+.privacy-content .privacy-updated { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.privacy-section { border-top: 1px solid var(--line); padding-top: 28px; margin-top: 32px; }
+.privacy-section h2 { font-size: 1.45rem; margin-bottom: 14px; }
+.privacy-section p { color: var(--muted); margin: 0 0 14px; }
+.privacy-section a { color: var(--azure); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ---------- metrics band ---------- */
 .metrics { position: relative; border-top: 1px solid var(--dark-line); background: var(--ink); }
 .metrics .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 34px 28px; }

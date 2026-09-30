@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const siteUrl = "https://bluecloudai.us";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/about", "/services", "/solutions", "/contact"];
+  const routes = ["", "/about", "/services", "/solutions", "/contact", "/privacy-policy"];
 
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
